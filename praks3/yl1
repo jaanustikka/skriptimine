@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo -n "Kuupäev: "
+echo `date +"%d:%m:%y"`
+echo `date "+kell on: %H:%M:%S"`
+echo `date "+Today is:%A"`
