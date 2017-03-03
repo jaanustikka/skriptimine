@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+echo -n "Sisesta failinimi: "
+read fn
+touch $fn
+fail=$(ls | grep $fn)
+echo "fail nimega $fail on loodud"
