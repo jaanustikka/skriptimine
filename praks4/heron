@@ -1,0 +1,21 @@
+#!/bin/bash
+#heeeeron valem
+
+echo -n "Sisesta a külje väärtus: "
+read a
+echo -n "Sisesta b külje väärtus: "
+read b
+echo -n "Sisesta c külje väärtus: "
+read c
+
+#sulgude vahetulemused
+
+p=`echo "($a+$b+$c)/2" | bc`
+esimenes=`echo "$p-$a" | bc`
+teines=`echo "$p-$b" | bc`
+kolmass=`echo "$p-$c" | bc`
+#sulgude tulemus korrutisena
+sulud=`echo "$p*$esimenes*$teines*$kolmass" | bc`
+S=`echo "scale=5;sqrt($sulud)" | bc`
+echo "S = $S"
+
