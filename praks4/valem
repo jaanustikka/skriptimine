@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+echo -n "Sisesta a külje väärtus: "
+read a
+echo -n "Sisesta b külje väärtus: "
+read b
+
+a_ruut=`echo "$a*$a" | bc`
+b_ruut=`echo "$b*$b" | bc`
+c_ruut=`echo "$a_ruut+$b_ruut" | bc`
+c=`echo "scale=2;sqrt ($c_ruut)" | bc`
+echo "c = $c"
