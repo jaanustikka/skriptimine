@@ -1,0 +1,16 @@
+#!/bin/bash
+echo -n "Faili asukoht koos nimega: "
+read asukoht
+
+#kontrollib, kas asukoht sai 6igesti kirjutatud
+if [ -e $asukoht ]; then
+	echo "Fail leitud"
+else
+	echo "Faili ei leitud"
+fi
+git add $asukoht
+echo -n "Githubi kirjeldus: "
+read kirjeldus
+git commit -m $kirjeldus
+git push -uf skriptimine master
+
